@@ -55,7 +55,7 @@
             </tbody>
         </table>
 
-        <form action="/home" method="post" class="flex gap-1">
+        <form action="/home" method="post" class="flex gap-3">
             @csrf
             <input type="text" name="todo-item" id="todo-item" class="p-1 bg-gray-100 border-slate-200 border-2 outline-none rounded-md focus:ring-blue-500 focus:ring-2 ring-blue-500" placeholder="New Todo">
             <select name="todo-category" id="todo-category" class="rounded-md bg-slate-200 p-1 border-1 border-slate-200">

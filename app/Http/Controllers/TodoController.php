@@ -13,7 +13,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = Todo::all();
+        $todos = Todo::where('user_id', auth()->user()->id)->get();
         $categories = Category::all();
 
         return view('home.index', [
@@ -38,12 +38,14 @@ class TodoController extends Controller
     {
         $newTodoActivity = $request->input('todo-item');
         $status = 'PENDING';
-        $todo_category = $request->input('todo-category');
+        $todoCategory = $request->input('todo-category');
+        $userId = auth()->user()->id;
         
         Todo::create([
             'activity' => $newTodoActivity,
             'status' => $status,
-            'category_id' => $todo_category
+            'category_id' => $todoCategory,
+            'user_id' => $userId
         ]);
 
         return redirect()->back();
