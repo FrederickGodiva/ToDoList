@@ -1,21 +1,17 @@
 <?php
 
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 Route::view('/', 'welcome');
 
-Route::get('/home', function () {
-    return view('home.index', [
-        'title' => 'Home'
-    ]);
-});
+Route::resource('/home', TodoController::class);
 
 Route::view('/login', 'login.index', [
     'title' => 'Login'
 ]);
 
-Route::get('/register', function() {
-    return view('register.index', [
-        'title' => 'Register'
-    ]);
-});
+Route::view('/register', 'register.index', [
+    'title' => 'Register'
+]);
