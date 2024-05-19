@@ -2,7 +2,7 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     <h1 class="text-5xl text-blue-700 font-bold text-center">To Do List</h1>
 
-    <div class="container flex flex-col items-center max-w-screen-md gap-5 mx-auto mt-3">
+    <div class="container flex flex-col items-center max-w-screen-md gap-5 ">
         <table class="w-full border text-sm text-left text-gray-500 rtl:text-right">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr class="px-6 py-3 text-center border-b">
@@ -64,6 +64,13 @@
                 @endforeach
             </select>
             <button type="submit" class="px-4 py-2 text-white rounded-md bg-violet-700 hover:bg-violet-500">Add Todo</button>
+        </form>
+    </div>
+
+    <div class="justify-end">
+        <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="px-4 py-2 text-white rounded-md bg-red-600 hover:bg-red-500">Logout</button>
         </form>
     </div>
 </x-main>

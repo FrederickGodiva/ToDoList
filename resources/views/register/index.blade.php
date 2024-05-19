@@ -3,7 +3,7 @@
 
     <h1 class="text-5xl text-blue-700 font-bold text-center">Please Register</h1>
 
-    <form action="" method="post" class="mt-3 flex flex-col gap-4">
+    <form action="/register" method="post" class="mt-3 flex flex-col gap-4">
         @csrf
         <div class="flex flex-col">
             <label for="username">Username</label>

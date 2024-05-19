@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="p-4 bg-gray-200 w-screen h-screen">
-        <main class="bg-white lg:w-2/4 rounded-xl px-6 py-8 mx-auto mt-10">
+        <main class="bg-white lg:w-2/4 rounded-xl px-6 py-8 mx-auto mt-10 flex flex-col gap-2">
             {{  $slot  }}
         </main>
     </div>
