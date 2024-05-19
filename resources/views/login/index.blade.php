@@ -15,7 +15,7 @@
             <input type="password" name="password" id="password" placeholder="********" class="py-1 px-2 rounded-md border-slate-200 border-2 outline-none rounded-md focus:ring-blue-500 focus:ring-2 ring-blue-500">
         </div>
         
-        <button type="submit" class="bg-green-500 rounded-md text-white text-2xl font-semibold py-1">Login</button>
+        <button type="submit" class="bg-green-600 rounded-md text-white text-2xl font-semibold py-1 hover:bg-green-500">Login</button>
     </form>
 
     <p class="text-sm text-center mt-1">don't have an account? <a href="/register" class="text-blue-500 hover:underline">register</a></p>

@@ -20,7 +20,7 @@
             <input type="password" name="password-confirm" id="password-confirm" placeholder="********" class="p-1 rounded-md border-slate-200 border-2 outline-none rounded-md focus:ring-blue-500 focus:ring-2 ring-blue-500">
         </div>
             
-        <button type="submit" class="bg-sky-500 rounded-md text-white text-2xl font-semibold py-1">Register</button>
+        <button type="submit" class="bg-sky-500 rounded-md text-white text-2xl font-semibold py-1 hover:bg-sky-400">Register</button>
     </form>
 
     <p class="text-sm text-center mt-1">already have an account? <a href="/login" class="text-blue-500 hover:underline">log in to your account</a></p>
