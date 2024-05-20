@@ -32,7 +32,7 @@
                         <td class="py-4 text-center flex gap-1 justify-evenly">
                             <form action="/home/{{ $todo->id }}" method="post">
                                 @csrf
-                                @method('PUT')
+                                @method('PATCH')
                                 <button type="submit" class="px-2 py-2 text-white bg-green-600 rounded-md hover:bg-green-500" aria-label="Mark as Done">
                                     <i data-feather="check"></i>
                                 </button>
