@@ -12,10 +12,12 @@ Route::get('/', function () {
 // ! Error
 // Route::resource('/home', TodoController::class)->middleware('auth');
 
-Route::get('/home', [TodoController::class, 'index'])->middleware('auth');
-Route::post('/home', [TodoController::class, 'store'])->middleware('auth');
-Route::patch('/home/{todo:id}', [TodoController::class, 'update'])->middleware('auth');
-Route::delete('/home/{todo:id}', [TodoController::class, 'destroy'])->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [TodoController::class, 'index']);
+    Route::post('/home', [TodoController::class, 'store']);
+    Route::patch('/home/{todo:id}', [TodoController::class, 'update']);
+    Route::delete('/home/{todo:id}', [TodoController::class, 'destroy']);
+});
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
