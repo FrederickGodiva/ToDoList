@@ -8,8 +8,11 @@
 .env
 .env.backup
 .env.production
+<<<<<<< HEAD
 .phpactor.json
 .phpunit.result.cache
+=======
+>>>>>>> 91941c7 (feat: convert to laravel 10)
 Homestead.json
 Homestead.yaml
 auth.json

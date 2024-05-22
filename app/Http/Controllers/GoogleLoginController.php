@@ -17,8 +17,12 @@ class GoogleLoginController extends Controller
     }
 
     public function callback() {
+<<<<<<< HEAD
         try {
             $user = Socialite::driver('google')->user();
+=======
+            $user = Socialite::driver('google')->stateless()->user();
+>>>>>>> 91941c7 (feat: convert to laravel 10)
     
             $registeredUser = User::where('google_id', $user->id)->first();
     
@@ -32,6 +36,7 @@ class GoogleLoginController extends Controller
                     'google_refresh_token' => $user->refreshToken,
                 ]);
     
+<<<<<<< HEAD
                 Auth::login($user);
                 return redirect('/home');
             } else {
@@ -42,5 +47,15 @@ class GoogleLoginController extends Controller
             dd($e->getMessage());
             return redirect('/login');
         }
+=======
+                $login = Auth::login($user);
+                return redirect('/home');
+            } else {
+                dd($registeredUser);
+                $login = Auth::login($registeredUser, true);
+                // dd(Auth::check());
+                return redirect()->intended('/home');
+            }
+>>>>>>> 91941c7 (feat: convert to laravel 10)
     }
 }

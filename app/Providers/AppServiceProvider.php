@@ -3,8 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Gate;
 use App\Models\User;
+=======
+>>>>>>> 91941c7 (feat: convert to laravel 10)
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+<<<<<<< HEAD
         
+=======
+        //
+>>>>>>> 91941c7 (feat: convert to laravel 10)
     }
 }

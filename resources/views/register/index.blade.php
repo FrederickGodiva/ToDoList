@@ -3,7 +3,11 @@
 
     <h1 class="text-5xl text-blue-700 font-bold text-center">Please Register</h1>
 
+<<<<<<< HEAD
     <form action="/register" method="post" class="mt-3 flex flex-col gap-4">
+=======
+    <form action="{{route('register')}}" method="post" class="mt-3 flex flex-col gap-4">
+>>>>>>> 91941c7 (feat: convert to laravel 10)
         @csrf
         <div class="flex flex-col">
             <label for="username">Username</label>

@@ -5,7 +5,10 @@ export default {
     "./resources/**/*.js",
     "./resources/**/*.vue",
   ],
+<<<<<<< HEAD
   darkMode: "class",
+=======
+>>>>>>> 91941c7 (feat: convert to laravel 10)
   theme: {
     extend: {},
   },
