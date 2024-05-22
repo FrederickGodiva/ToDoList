@@ -19,6 +19,8 @@
             <p class="text-red-500 font-semibold">Login Failed! Please check your username and password</p>
         @endif
         <button type="submit" class="bg-green-600 rounded-md text-white text-2xl font-semibold py-1 hover:bg-green-500">Login</button>
+        
+        <a href="/auth/redirect" class="">Login with Google</a>
     </form>
 
     <p class="text-sm text-center mt-1">don't have an account? <a href="/register" class="text-blue-500 hover:underline">register</a></p>

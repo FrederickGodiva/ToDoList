@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
@@ -24,5 +25,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/auth/redirect', [GoogleLoginController::class, 'redirect']);
+Route::get('/auth/google/callback', [GoogleLoginController::class, 'callback']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
